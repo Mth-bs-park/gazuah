@@ -1,0 +1,47 @@
+page-ranking {
+
+  ion-select {
+    margin: 0 auto;
+    width: 110px;
+
+    .select-text {
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+  }
+
+  ion-content {
+    // my rank
+    .my-rank-wrap {
+      position: fixed;
+      width: 100%;
+      //z-index: 1;
+      height: 61px;
+
+      ion-item {
+        border-bottom: 0.55px solid #c8c7cc;
+        border-bottom-width: 0.55px;
+        border-bottom-style: solid;
+        border-bottom-color: rgb(200, 199, 204);
+        .item-inner{
+          border: none;
+        }
+      }
+
+      .rank {
+        display: flex;
+        .rank-text{
+          margin-left: 10px;
+        }
+      }
+    }
+    //list
+    ion-list {
+      &.top-margin{
+        margin-top: 68px;
+      }
+    }
+
+  }
+}
