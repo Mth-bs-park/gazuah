@@ -1,3 +1,22 @@
+$background-wrap-blur: blur(3px);
+
+$item-height: 76px;
+$item-border-radius: 10px;
+
+$thumbnail-width-height: 45px;
+
+$flag-top-position: 30px;
+$flag-width-height: 15px;
+
+$text-wrap-line-height: 24px;
+$name-font-size: 18px;
+$rank-number-font-size: 24px;
+$rank-text-font-size: 17px;
+
+$change-font-size: 17px;
+
+$line-spacing: -0.4pt;
+
 page-ranking {
 
   // scroll
@@ -5,18 +24,27 @@ page-ranking {
     background: linear-gradient(rgb(33, 33, 33), rgb(66, 66, 66));
   }
 
+  .background-wrap {
+    filter: $background-wrap-blur;
+    height: 100%;
+    position: fixed;
+
+    .background-img {
+      height: 100%;
+    }
+  }
+
   ion-list {
     margin: 0 5px !important;
   }
 
   ion-item {
-    height: 76px;
-    border-radius: 10px !important;
+    height: $item-height;
+    border-radius: $item-border-radius !important;
 
     &.item-block {
       background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9));
       margin: 5px 0;
-      //border: 2px solid #3b5998 !important;
 
       &:first-child {
         border-top: none !important;
@@ -35,53 +63,65 @@ page-ranking {
       }
 
       .thumbnail {
-        width: 45px;
-        height: 45px;
+        width: $thumbnail-width-height;
+        height: $thumbnail-width-height;
       }
 
       .flag {
         position: absolute;
-        top: 30px;
-        width: 15px;
-        height: 15px;
+        top: $flag-top-position;
+        width: $flag-width-height;
+        height: $flag-width-height;
         border: 1px solid #ffffff;
       }
     }
 
-    .text-wrap {
-      position: relative;
-      line-height: 24pt;
-      .name {
-        font-size: 17pt;
-        //line-height: 17pt;
-        letter-spacing: -0.4pt;
-      }
+    .label {
+      margin: 13px 0 !important;
 
-      .rank-wrap{
-        position: absolute;
-        left: calc(50% - 20px);
-        display: inline-block;
-
-        .rank-number {
-          font-size: 24pt;
-          letter-spacing: -0.4pt;
-          color: rgb(3, 3, 3);
+      .text-wrap {
+        position: relative;
+        line-height: $text-wrap-line-height;
+        .name {
+          font-size: $name-font-size;
+          line-height: $name-font-size;
+          letter-spacing: $line-spacing;
         }
 
-        .post-text {
-          font-size: 17pt;
-          letter-spacing: -0.4pt;
-          color: rgb(3, 3, 3);
+        .rank-wrap{
+          position: absolute;
+          right: calc(50% - 20px);
+          display: inline-block;
+
+          .rank-number {
+            font-size: $rank-number-font-size;
+            line-height: $rank-number-font-size;
+            letter-spacing: $line-spacing;
+            color: rgb(3, 3, 3);
+          }
+
+          .rank-text {
+            position: relative;
+            right: 2px;
+            font-size: $rank-text-font-size;
+            line-height: $rank-number-font-size;
+            letter-spacing: $line-spacing;
+            color: rgb(3, 3, 3);
+            vertical-align: top;
+          }
         }
       }
+
 
       .change {
         position: absolute;
         right: 15px;
-        font-size: 17pt;
-        //line-height: 17pt;
-        letter-spacing: -0.4pt;
-        height: 20px;
+        max-width: 100px;
+        height: 20pt;
+        text-align: right;
+        font-size: $change-font-size;
+        font-weight: bold;
+        letter-spacing: $line-spacing;
 
         &.up {
           color: rgb(208, 2, 27);
