@@ -10,4 +10,4 @@ import { RankingPage } from './ranking';
     IonicPageModule.forChild(RankingPage),
   ],
 })
-export class Rank2PageModule {}
+export class RankingPageModule {}

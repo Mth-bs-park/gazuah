@@ -1,46 +1,84 @@
 <ion-header>
-
   <ion-navbar>
-    <!--<ion-title>ranking</ion-title>-->
-    <ion-select [(ngModel)]="standard" interface="popover">
-      <ion-option value="weekly">Weekly</ion-option>
-      <ion-option value="monthly">Monthly</ion-option>
-      <ion-option value="overall">Overall</ion-option>
-    </ion-select>
+    <ion-title>ranking</ion-title>
   </ion-navbar>
 
 </ion-header>
 
-
 <ion-content>
-
-  <div #rankWrap >
+  <div style="filter: blur(5px); height: 100%; position: absolute">
+    <img style="height: 100%;"
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgIjFUOm55lE51OyoHhVspKSF05Qm8uVTaf_huAwjmfC3yx87a">
+  </div>
+  <ion-list>
     <ion-item>
-      <ion-avatar item-start>
-        <img src="https://www.postplanner.com/hs-fs/hub/513577/file-2909864225-gif/blog-files/facebook-thumbnail-250px.gif?t=1517797518958&width=250&height=250&name=facebook-thumbnail-250px.gif">
+      <ion-avatar item-left>
+        <img class="thumbnail"
+             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgIjFUOm55lE51OyoHhVspKSF05Qm8uVTaf_huAwjmfC3yx87a">
+        <img class="flag"
+             src="assets/flag/germany.png">
       </ion-avatar>
-      <p>Hayao Miyazaki • 1988</p>
-      <div class="rank">
-        <ion-icon name="star"></ion-icon>
-        <p class="rank-text">10000 th</p>
+      <div class="text-wrap">
+        <span class="name">actysp</span>
+        <div class="rank-wrap">
+          <span class="rank-number">1</span>
+          <span class="post-text">st</span>
+        </div>
+        <span class="change up">({{12312|number}})</span>
       </div>
     </ion-item>
-  </div>
 
-  <ion-list class="top-margin">
-    <!--<ion-item *ngFor="let i of items">{{i}}</ion-item>-->
-    <ion-card *ngFor="let item of items; let rank = index;">
-      <ion-card-header>
-        {{rank + 1}}
-      </ion-card-header>
-      <ion-card-content>
-        {{item}}
-      </ion-card-content>
-    </ion-card>
+    <ion-item>
+      <ion-avatar item-left>
+        <img class="thumbnail"
+             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgIjFUOm55lE51OyoHhVspKSF05Qm8uVTaf_huAwjmfC3yx87a">
+        <img class="flag"
+             src="assets/flag/germany.png">
+      </ion-avatar>
+      <div class="text-wrap">
+        <span class="name">actysp</span>
+        <div class="rank-wrap">
+          <span class="rank-number">2</span>
+          <span class="post-text">nd</span>
+        </div>
+        <span class="change up">({{12312|number}})</span>
+      </div>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar item-left>
+        <img class="thumbnail"
+             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgIjFUOm55lE51OyoHhVspKSF05Qm8uVTaf_huAwjmfC3yx87a">
+        <img class="flag"
+             src="assets/flag/germany.png">
+      </ion-avatar>
+      <div class="text-wrap">
+        <span class="name">actysp</span>
+        <div class="rank-wrap">
+          <span class="rank-number">3</span>
+          <span class="post-text">rd</span>
+        </div>
+        <span class="change up">({{12312|number}})</span>
+      </div>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar item-left>
+        <img class="thumbnail"
+             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgIjFUOm55lE51OyoHhVspKSF05Qm8uVTaf_huAwjmfC3yx87a">
+        <img class="flag"
+             src="assets/flag/germany.png">
+      </ion-avatar>
+      <div class="text-wrap">
+        <span class="name">actysp</span>
+        <div class="rank-wrap">
+          <span class="rank-number">4</span>
+          <span class="post-text">th</span>
+        </div>
+        <span class="change up">({{12312|number}})</span>
+      </div>
+    </ion-item>
+
+
   </ion-list>
-
-  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
-    <ion-infinite-scroll-content></ion-infinite-scroll-content>
-  </ion-infinite-scroll>
-
 </ion-content>

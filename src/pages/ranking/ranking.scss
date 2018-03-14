@@ -1,47 +1,97 @@
 page-ranking {
 
-  ion-select {
-    margin: 0 auto;
-    width: 110px;
-
-    .select-text {
-      text-align: center;
-      font-weight: bold;
-      font-size: 1.2em;
-    }
+  // scroll
+  .scroll-content {
+    background: linear-gradient(rgb(33, 33, 33), rgb(66, 66, 66));
   }
 
-  ion-content {
-    // my rank
-    .my-rank-wrap {
-      position: fixed;
-      width: 100%;
-      //z-index: 1;
-      height: 61px;
+  ion-list {
+    margin: 0 5px !important;
+  }
 
-      ion-item {
-        border-bottom: 0.55px solid #c8c7cc;
-        border-bottom-width: 0.55px;
-        border-bottom-style: solid;
-        border-bottom-color: rgb(200, 199, 204);
-        .item-inner{
-          border: none;
-        }
+  ion-item {
+    height: 76px;
+    border-radius: 10px !important;
+
+    &.item-block {
+      background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9));
+      margin: 5px 0;
+      //border: 2px solid #3b5998 !important;
+
+      &:first-child {
+        border-top: none !important;
       }
 
-      .rank {
-        display: flex;
-        .rank-text{
-          margin-left: 10px;
-        }
-      }
-    }
-    //list
-    ion-list {
-      &.top-margin{
-        margin-top: 68px;
+      &:last-child {
+        border: none !important;
       }
     }
 
+    ion-avatar {
+      position: relative;
+
+      &[item-left] {
+        margin-right: 15px !important;
+      }
+
+      .thumbnail {
+        width: 45px;
+        height: 45px;
+      }
+
+      .flag {
+        position: absolute;
+        top: 30px;
+        width: 15px;
+        height: 15px;
+        border: 1px solid #ffffff;
+      }
+    }
+
+    .text-wrap {
+      position: relative;
+      line-height: 24pt;
+      .name {
+        font-size: 17pt;
+        //line-height: 17pt;
+        letter-spacing: -0.4pt;
+      }
+
+      .rank-wrap{
+        position: absolute;
+        left: calc(50% - 20px);
+        display: inline-block;
+
+        .rank-number {
+          font-size: 24pt;
+          letter-spacing: -0.4pt;
+          color: rgb(3, 3, 3);
+        }
+
+        .post-text {
+          font-size: 17pt;
+          letter-spacing: -0.4pt;
+          color: rgb(3, 3, 3);
+        }
+      }
+
+      .change {
+        position: absolute;
+        right: 15px;
+        font-size: 17pt;
+        //line-height: 17pt;
+        letter-spacing: -0.4pt;
+        height: 20px;
+
+        &.up {
+          color: rgb(208, 2, 27);
+        }
+
+        &.down {
+          color: rgb(97, 97, 97);
+        }
+      }
+
+    }
   }
 }
