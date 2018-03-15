@@ -9,11 +9,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {RankingPage} from "../pages/ranking/ranking";
 import { ComponentsModule } from "../components/components.module";
+import { TestPage } from "../pages/test/test";
 
 @NgModule({
   declarations: [
     MyApp,
     RankingPage,
+    TestPage,
     TabsPage
   ],
   imports: [
@@ -25,6 +27,7 @@ import { ComponentsModule } from "../components/components.module";
   entryComponents: [
     MyApp,
     RankingPage,
+    TestPage,
     TabsPage
   ],
   providers: [

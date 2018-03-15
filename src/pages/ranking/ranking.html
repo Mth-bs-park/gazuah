@@ -6,19 +6,26 @@
 </ion-header>
 
 <ion-content>
-  <div class="background-wrap">
-    <img class="background-img"
-      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgIjFUOm55lE51OyoHhVspKSF05Qm8uVTaf_huAwjmfC3yx87a">
-  </div>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <!--<div class="background-wrap">-->
+    <!--<img class="background-img"-->
+         <!--src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgIjFUOm55lE51OyoHhVspKSF05Qm8uVTaf_huAwjmfC3yx87a">-->
+  <!--</div>-->
+
   <ion-list>
     <ion-item *ngFor="let item of items; let i = index;">
       <ion-avatar item-left>
         <thumbnail
           [thumbnailSrc]="'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgIjFUOm55lE51OyoHhVspKSF05Qm8uVTaf_huAwjmfC3yx87a'"
-          [flagSrc]="'assets/flag/germany.png'">
+          [flagSrc]="'assets/flag/germany.png'"
+          [width]="45"
+          [height]="45">
         </thumbnail>
-
       </ion-avatar>
+
       <div class="text-wrap">
         <span class="name">{{item.name}}</span>
         <div class="rank-wrap">
@@ -28,6 +35,6 @@
         <span class="change up">({{item.change|number}})</span>
       </div>
     </ion-item>
-
   </ion-list>
+
 </ion-content>

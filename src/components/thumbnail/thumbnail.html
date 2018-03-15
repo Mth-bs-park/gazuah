@@ -1,9 +1,12 @@
-<!-- Generated template for the ThumbnailComponent component -->
 <div class="thumbnail-wrap">
   <img class="thumbnail"
-       src="{{thumbnailSrc}}">
+       src="{{thumbnailSrc}}"
+       [style.width]="thumbnailWidth"
+       [style.height]="thumbnailHeight">
 
   <img class="flag"
-       src="{{flagSrc}}">
+       src="{{flagSrc}}"
+       [style.width]="flagWidth"
+       [style.height]="flagHeight">
 
 </div>

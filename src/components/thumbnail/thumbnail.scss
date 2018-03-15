@@ -1,24 +1,32 @@
 $thumbnail-width-height: 45px;
 
-$flag-top-position: 30px;
+$flag-bottom-position: 0px;
 $flag-width-height: 15px;
 $flag-border-color: #ffffff;
 
 thumbnail {
+
   .thumbnail-wrap {
     position: relative;
+    display: inline-block;
 
     .thumbnail {
       width: $thumbnail-width-height;
       height: $thumbnail-width-height;
+      border-radius: 50%;
     }
 
     .flag {
       position: absolute;
-      top: $flag-top-position;
+      bottom: $flag-bottom-position;
       width: $flag-width-height;
       height: $flag-width-height;
       border: 1px solid $flag-border-color;
+      border-radius: 50%;
+    }
+
+    img {
+      display: block;
     }
   }
 }

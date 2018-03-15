@@ -45,3 +45,11 @@
     color: rgb(255, 87, 34) !important;
   }
 }
+
+ion-content {
+  background: linear-gradient(rgb(33, 33, 33), rgb(66, 66, 66)) !important;
+
+  .scroll-content {
+    border-top: none !important;
+  }
+}

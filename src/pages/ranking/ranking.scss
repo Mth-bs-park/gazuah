@@ -14,20 +14,15 @@ $line-spacing: -0.4pt;
 
 page-ranking {
 
-  // scroll
-  .scroll-content {
-    background: linear-gradient(rgb(33, 33, 33), rgb(66, 66, 66));
-  }
-
-  .background-wrap {
-    filter: $background-wrap-blur;
-    height: 100%;
-    position: fixed;
-
-    .background-img {
-      height: 100%;
-    }
-  }
+  //.background-wrap {
+  //  filter: $background-wrap-blur;
+  //  height: 100%;
+  //  position: fixed;
+  //
+  //  .background-img {
+  //    height: 100%;
+  //  }
+  //}
 
   ion-list {
     margin: 0 5px !important;
@@ -38,8 +33,10 @@ page-ranking {
     border-radius: $item-border-radius !important;
 
     &.item-block {
-      background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9));
+      //background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9));
+      background: rgba(255, 255, 255, 0.85);
       margin: 5px 0;
+      border-bottom: none;
 
       &:first-child {
         border-top: none !important;

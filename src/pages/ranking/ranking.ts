@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {Component, ElementRef, ViewChild} from '@angular/core';
+import {IonicPage, NavController, NavParams} from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -8,14 +8,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class RankingPage {
 
+  @ViewChild('list') list: ElementRef;
+
   private items: any[] = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RankingPage');
-
     this.items = this._generateItems();
   }
 
@@ -36,6 +36,17 @@ export class RankingPage {
 
     return result;
   }
+
+  doRefresh(refresher){
+    console.log('Begin async operation', refresher);
+
+    setTimeout(() => {
+      const items = this._generateItems();
+      this.items = this.items.concat(items);
+      refresher.complete();
+    }, 2000);
+  }
+
 
   _generateItems(): any[] {
     const items = [];
