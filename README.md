@@ -1,2 +1,2 @@
-# vanter
-vanter project
+# gazuah
+gazuah project
