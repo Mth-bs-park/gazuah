@@ -1,0 +1,35 @@
+sales-item {
+  .sales-item-wrap {
+    position: relative;
+    height: 36px;
+    line-height: 36px;
+
+    .sales-item-info {
+      display: inline-block;
+      // button-wrap width + margin-right;
+      width: calc(100% - 59px);
+      position: relative;
+
+      .desc {
+        margin-right: 31px;
+      }
+
+      .info-icon {
+        position: absolute;
+        right: 14px;
+        line-height: 36px;
+        color: rgb(255, 87, 34);
+      }
+    }
+
+    .button-wrap {
+      width: 52px;
+      text-align: right;
+      position: absolute;
+      right: 0px;
+      display: inline-block;
+      border-left: 1px solid rgb(151, 151, 151);
+      margin-right: 7px;
+    }
+  }
+}

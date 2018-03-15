@@ -10,11 +10,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import {RankingPage} from "../pages/ranking/ranking";
 import { ComponentsModule } from "../components/components.module";
 import { TestPage } from "../pages/test/test";
+import {StorePage} from "../pages/store/store";
 
 @NgModule({
   declarations: [
     MyApp,
     RankingPage,
+    StorePage,
     TestPage,
     TabsPage
   ],
@@ -27,6 +29,7 @@ import { TestPage } from "../pages/test/test";
   entryComponents: [
     MyApp,
     RankingPage,
+    StorePage,
     TestPage,
     TabsPage
   ],
