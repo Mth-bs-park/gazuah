@@ -11,71 +11,21 @@
       src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgIjFUOm55lE51OyoHhVspKSF05Qm8uVTaf_huAwjmfC3yx87a">
   </div>
   <ion-list>
-    <ion-item>
+    <ion-item *ngFor="let item of items; let i = index;">
       <ion-avatar item-left>
-        <img class="thumbnail"
-             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgIjFUOm55lE51OyoHhVspKSF05Qm8uVTaf_huAwjmfC3yx87a">
-        <img class="flag"
-             src="assets/flag/germany.png">
-      </ion-avatar>
-      <div class="text-wrap">
-        <span class="name">actysp</span>
-        <div class="rank-wrap">
-          <span class="rank-number">1</span>
-          <span class="rank-text">st</span>
-        </div>
-        <span class="change up">({{12312|number}})</span>
-      </div>
-    </ion-item>
+        <thumbnail
+          [thumbnailSrc]="'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgIjFUOm55lE51OyoHhVspKSF05Qm8uVTaf_huAwjmfC3yx87a'"
+          [flagSrc]="'assets/flag/germany.png'">
+        </thumbnail>
 
-    <ion-item>
-      <ion-avatar item-left>
-        <img class="thumbnail"
-             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgIjFUOm55lE51OyoHhVspKSF05Qm8uVTaf_huAwjmfC3yx87a">
-        <img class="flag"
-             src="assets/flag/germany.png">
       </ion-avatar>
       <div class="text-wrap">
-        <span class="name">actysp</span>
+        <span class="name">{{item.name}}</span>
         <div class="rank-wrap">
-          <span class="rank-number">2</span>
-          <span class="rank-text">nd</span>
+          <span class="rank-number">{{i + 1}}</span>
+          <span class="rank-text">{{getRankText(i + 1)}}</span>
         </div>
-        <span class="change up">({{12312|number}})</span>
-      </div>
-    </ion-item>
-
-    <ion-item>
-      <ion-avatar item-left>
-        <img class="thumbnail"
-             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgIjFUOm55lE51OyoHhVspKSF05Qm8uVTaf_huAwjmfC3yx87a">
-        <img class="flag"
-             src="assets/flag/germany.png">
-      </ion-avatar>
-      <div class="text-wrap">
-        <span class="name">actysp</span>
-        <div class="rank-wrap">
-          <span class="rank-number">3</span>
-          <span class="rank-text">rd</span>
-        </div>
-        <span class="change up">({{12312|number}})</span>
-      </div>
-    </ion-item>
-
-    <ion-item>
-      <ion-avatar item-left>
-        <img class="thumbnail"
-             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgIjFUOm55lE51OyoHhVspKSF05Qm8uVTaf_huAwjmfC3yx87a">
-        <img class="flag"
-             src="assets/flag/germany.png">
-      </ion-avatar>
-      <div class="text-wrap">
-        <span class="name">actysp</span>
-        <div class="rank-wrap">
-          <span class="rank-number">4</span>
-          <span class="rank-text">th</span>
-        </div>
-        <span class="change up">({{12312|number}})</span>
+        <span class="change up">({{item.change|number}})</span>
       </div>
     </ion-item>
 

@@ -8,6 +8,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {RankingPage} from "../pages/ranking/ranking";
+import { ComponentsModule } from "../components/components.module";
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {RankingPage} from "../pages/ranking/ranking";
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    ComponentsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

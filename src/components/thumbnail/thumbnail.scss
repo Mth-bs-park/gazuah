@@ -1,0 +1,24 @@
+$thumbnail-width-height: 45px;
+
+$flag-top-position: 30px;
+$flag-width-height: 15px;
+$flag-border-color: #ffffff;
+
+thumbnail {
+  .thumbnail-wrap {
+    position: relative;
+
+    .thumbnail {
+      width: $thumbnail-width-height;
+      height: $thumbnail-width-height;
+    }
+
+    .flag {
+      position: absolute;
+      top: $flag-top-position;
+      width: $flag-width-height;
+      height: $flag-width-height;
+      border: 1px solid $flag-border-color;
+    }
+  }
+}

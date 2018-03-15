@@ -3,11 +3,6 @@ $background-wrap-blur: blur(3px);
 $item-height: 76px;
 $item-border-radius: 10px;
 
-$thumbnail-width-height: 45px;
-
-$flag-top-position: 30px;
-$flag-width-height: 15px;
-
 $text-wrap-line-height: 24px;
 $name-font-size: 18px;
 $rank-number-font-size: 24px;
@@ -60,19 +55,6 @@ page-ranking {
 
       &[item-left] {
         margin-right: 15px !important;
-      }
-
-      .thumbnail {
-        width: $thumbnail-width-height;
-        height: $thumbnail-width-height;
-      }
-
-      .flag {
-        position: absolute;
-        top: $flag-top-position;
-        width: $flag-width-height;
-        height: $flag-width-height;
-        border: 1px solid #ffffff;
       }
     }
 
