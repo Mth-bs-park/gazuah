@@ -49,5 +49,8 @@ export class StorePage {
     return points;
   }
 
+  buy(e: Event) {
+    console.log('buy', e);
+  }
 
 }

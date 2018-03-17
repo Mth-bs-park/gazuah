@@ -1,4 +1,4 @@
-import { Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'sales-item',
@@ -6,6 +6,7 @@ import { Component, Input, OnInit} from '@angular/core';
 })
 export class SalesItemComponent implements OnInit{
   @Input() item: any;
+  @Output() buy: EventEmitter<any> = new EventEmitter();
 
   private label: string;
   private cost: number;
@@ -24,7 +25,7 @@ export class SalesItemComponent implements OnInit{
 
   click() {
     console.log('click');
-
+    this.buy.emit(this.item);
   }
 
 }

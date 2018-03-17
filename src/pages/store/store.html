@@ -12,14 +12,14 @@
     <ion-item-group>
       <ion-item-divider color="light">Gazuah Boosts</ion-item-divider>
       <ion-item *ngFor="let boost of boosts">
-        <sales-item [item]="boost"></sales-item>
+        <sales-item [item]="boost" (buy)="buy($event)"></sales-item>
       </ion-item>
     </ion-item-group>
 
     <ion-item-group>
       <ion-item-divider color="dark">Gazuah Points</ion-item-divider>
       <ion-item *ngFor="let point of points">
-        <sales-item [item]="point"></sales-item>
+        <sales-item [item]="point" (buy)="buy($event)"></sales-item>
       </ion-item>
     </ion-item-group>
 
