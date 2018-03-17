@@ -26,12 +26,31 @@ sales-item {
 
     .button-wrap {
       width: 52px;
-      text-align: right;
       position: absolute;
       right: 0px;
       display: inline-block;
       border-left: 1px solid rgb(151, 151, 151);
       margin-right: 7px;
+      height: 36px;
+
+      .buy-btn {
+        width: 100%;
+        height: 36px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+
+        span {
+          display: inline-block;
+          text-align: right;
+          font-size: 16px;
+          letter-spacing: -0.4px;
+          line-height: 36px;
+          color: rgb(97, 97, 97);
+        }
+      }
     }
   }
 }

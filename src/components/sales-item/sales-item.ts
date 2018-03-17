@@ -22,4 +22,9 @@ export class SalesItemComponent implements OnInit{
     this.isAlarm = item.isAlarm;
   }
 
+  click() {
+    console.log('click');
+
+  }
+
 }
