@@ -1,10 +1,16 @@
 <div class="sales-item-wrap">
-  <div class="sales-item-info">
+  <div class="boosts-alarm-wrap" *ngIf="isAlarm">
+    <span class="boosts-alarm">
+        Your boosts ends in 32 seconds
+    </span>
+  </div>
+
+  <div class="sales-item-info" *ngIf="!isAlarm">
             <span class="desc">
-              +10% for an hr
+              {{label}}
             </span>
     <span class="cost">
-              $1.99
+              ${{cost}}
             </span>
     <ion-icon class="info-icon" ios="ios-information-circle-outline"
               md="ios-information-circle-outline"></ion-icon>
